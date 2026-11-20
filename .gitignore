@@ -3,5 +3,10 @@
 target/
 dbt_packages/
 logs/
+<<<<<<< HEAD
 env/
 .venv/
+=======
+.venv/
+env/
+>>>>>>> fda1cb28478b51f4b733c08c740808c273a5528e
