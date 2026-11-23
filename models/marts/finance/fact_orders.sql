@@ -8,7 +8,7 @@ with orders as (
 payments as (
 
     select * from {{ref("stg_stripe__payments")}}
-    where status = 'success'
+    where payment_status = 'success'
 
 ),
 
@@ -18,7 +18,9 @@ final as (
         orders.order_id,
         orders.customer_id,
         orders.order_date,
-        payments.amount
+        orders.status,
+        payments.payment_amount
+    
 
     from orders
 
